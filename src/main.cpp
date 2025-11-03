@@ -1,4 +1,4 @@
-//imie i nazwisko
+//Franciszek dudka
 
 #include <iostream>
 int main() {
