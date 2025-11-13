@@ -57,8 +57,8 @@ void zadanie2_2() {
         return;
     }
 
-    // 2. Przeszukanie danych w poszukiwaniu kwadratów 3x3
-    // Pętle iterują tylko po tych pozycjach, które mogą być środkiem (indeksy 1 do R-2 i 1 do C-2)
+    
+    
     for (int i = 1; i < R - 1; ++i) { 
         for (int j = 1; j < C - 1; ++j) { 
 
@@ -77,29 +77,29 @@ void zadanie2_2() {
                 }
             }
 
-            // 3. Zapis wyniku, jeśli znaleziono kwadrat
+           
             if (czy_kwadrat) {
-                // Zapisujemy numery wiersza i pozycji liczone OD 1
+                
                 srodki_kwadratow.push_back({i + 1, j + 1});
             }
             
-            next_potential_center:; // Etykieta dla goto
+            next_potential_center:; 
         }
     }
 
-    // 4. Zapis wyników do pliku wynik2_2.txt
+
     ofstream wynik("wynik2_2.txt");
     if (!wynik.is_open()) {
         cerr << "Błąd: Nie można otworzyć pliku wynikowego: wynik2_2.txt" << endl;
         return;
     }
 
-    // Wymagane jest podanie liczby kwadratów w pierwszej linii
+    
     wynik << srodki_kwadratow.size() << endl;
 
-    // Wypisanie współrzędnych środka każdego kwadratu
+
     for (const auto& srodek : srodki_kwadratow) {
-        // Format: numer_wiersza numer_pozycji
+        
         wynik << srodek.first << " " << srodek.second << endl;
     }
 
@@ -108,10 +108,9 @@ void zadanie2_2() {
     cout << "Wynik zapisano w pliku wynik2_2.txt" << endl;
 }
 
-// 5. Główna funkcja programu
+
 int main() {
-    // Ustawienie cout, aby działało prawidłowo z polskimi znakami
-    setlocale(LC_ALL, "Polish"); 
+
     
     zadanie2_2();
     return 0;
