@@ -95,12 +95,12 @@ void zadanie2_2() {
     }
 
     
-    wynik << srodki_kwadratow.size() << endl;
+    wynik << srodki_kwadratow.size() << " ";
 
 
     for (const auto& srodek : srodki_kwadratow) {
         
-        wynik << srodek.first << " " << srodek.second << endl;
+        wynik << srodek.first << " " << srodek.second;
     }
 
     wynik.close();
